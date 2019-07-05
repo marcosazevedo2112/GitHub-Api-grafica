@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- versão 1.0 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="author" content="marcosazevedo2112@github">
+    <meta name="description" content="a graphical interface for GitHub API">
+    <title>GAG</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body onload="alertaInicial('Atenção! A API so aceita 1(um) usuario por vez.')">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-3">GitHub API Grafica</h1>
+        <p class="lead">Uma interface grafica para a API de procura/visualização de dados dos usuarios</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="alert alert-info alert-info-dismiss">
+        <button data-dismiss="alert" type="button" class="close" name="button">&times;</button>
+        <strong>Procurando mais informações?</strong> Abra o console do navegador para uma visualização
+        em modo texto
+      </div>
+    </div>
+    <div class="container error-box" id="error-box">
+      <div id="alert-error-box" class="">
+      </div>
+    </div>
+    <div class="container">
+      <form>
+        <div class="form-group">
+          <label for="usr">Usuario: </label>
+          <div class="input-box">
+            <input id="usr_input" type="text" placeholder="marcosazevedo2112" class="form-control input-css-main"name="" value="">
+            <button id="btn-usr" type="button" class="btn btn-css-main" name="button">&#128269;</button>
+          </div>
+        </div>
+      </form>
+      <table class="table table-css-main">
+        </thead>
+        <tbody>
+          <tr>
+            <th>Nome:</th>
+            <td id="name"></td>
+          </tr>
+          <tr>
+            <th>Login: </th>
+            <td id="login"></td>
+          </tr>
+          <tr>
+            <th>ID: </th>
+            <td id="id"></td>
+          </tr>
+          <tr>
+            <th>Node ID: </th>
+            <td id="node-id"></td>
+          </tr>
+          <tr>
+            <th>Bio: </th>
+            <td id="bio"></td>
+          </tr>
+          <tr>
+            <th>Seguidores: </th>
+            <td id="followers"></td>
+          </tr>
+          <tr>
+            <th>Seguindo: </th>
+            <td id="following"></td>
+          </tr>
+          <tr>
+            <th>Criado em: </th>
+            <td id="created"></td>
+          </tr>
+          <tr>
+            <th>Localização: </th>
+            <td id="location"></td>
+          </tr>
+          <tr>
+            <th>Repositorios publicos: </th>
+            <td id="repo"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="main.js">
+
+    </script>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
